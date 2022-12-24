@@ -1,10 +1,9 @@
-import {app} from '../services/firebaseConnect'
-import { signInWithEmailAndPassword , getAuth } from "firebase/auth";
-
+import { app } from '../services/firebaseConnect'
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 
 const auth = getAuth(app);
 
-export default function login(email, senha){
+export default function loginService(email, senha) {
     return new Promise((resolve, reject) => {
         signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
@@ -15,5 +14,5 @@ export default function login(email, senha){
                 const errorMessage = error.message;
                 reject(errorMessage)
             });
-    });
+    })
 }
