@@ -1,0 +1,55 @@
+.coluna{
+    border: 1px solid #000;
+}
+
+.cabecalho{
+    min-height: 300px;
+    text-align: center;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    background-image: url("../images/backCabecalho.jpg");
+    background-size: cover;
+    background-position: center
+}
+
+.corpo{
+    min-height: 300px;
+    text-align: center;
+    background-color: "white";
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menu{
+    width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.itemMenu{
+    float: left;
+    width: 10%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.itemMenu:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
+.rodape{
+    min-height: 80px;
+    text-align: center;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    padding: 10px;
+    color: "white";
+}
