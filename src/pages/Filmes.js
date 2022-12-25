@@ -24,9 +24,7 @@ export default function Films() {
                     <Cabecalho />
                 </Grid>
                 <Grid item md={12} xs={12} sm={12}>
-
                     <MenuOptions />
-
                 </Grid>
                 <div>
                     <h1 className='title'>FILMES</h1>
@@ -34,10 +32,9 @@ export default function Films() {
                         {
                             Films.map((item, key) =>
                             <tr>
-                                    <td style={{widht: "50%"}}><b>Título:</b> {item.title}</td>
-                                    <td style={{widht: "50%"}}><b>Diretor:</b> {item.director}</td>
-
-                                </tr>
+                                <td style={{widht: "50%"}}><b>Título:</b> {item.title}</td>
+                                <td style={{widht: "50%"}}><b>Diretor:</b> {item.director}</td>
+                            </tr>
             
                             )
                         }
@@ -48,7 +45,6 @@ export default function Films() {
                     <Rodape />
                 </Grid>
             </Grid>
-
         </>
     )
 }

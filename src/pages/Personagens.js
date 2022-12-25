@@ -18,37 +18,30 @@ export default function People() {
 
   return (
     <>
-<Grid container style={{ padding: 10 }}>
-                <Grid item md={12} xs={12} sm={12}>
-                    <Cabecalho />
-                </Grid>
-                <Grid item md={12} xs={12} sm={12}>
-
-                    <MenuOptions />
-          
-                </Grid>
-                <div>
-    <h1 className='title'>PERSONAGENS</h1>
-    <table className="api"> 
-    {
-        People.map((item, key) =>
-        <tr>
-            <td style={{widht: "33%"}}><b>Nome:</b> {item.name}</td>
-            <td style={{widht: "33%"}}><b>Altura:</b> {item.height}</td>
-           
-
-        </tr>
-        
-    )
-    }
-
-</table>
-</div>
-                <Grid item md={12} xs={12} sm={12}>
-                    <Rodape />
-                </Grid>
+        <Grid container style={{ padding: 10 }}>
+            <Grid item md={12} xs={12} sm={12}>
+                <Cabecalho />
             </Grid>
-    
+            <Grid item md={12} xs={12} sm={12}>
+                <MenuOptions />
+            </Grid>
+            <div>
+                <h1 className='title'>PERSONAGENS</h1>
+                <table className="api"> 
+                    {
+                        People.map((item, key) =>
+                        <tr>
+                            <td style={{widht: "33%"}}><b>Nome:</b> {item.name}</td>
+                            <td style={{widht: "33%"}}><b>Altura:</b> {item.height}</td>
+                        </tr>
+                        )
+                    }
+                </table>
+            </div>
+            <Grid item md={12} xs={12} sm={12}>
+                <Rodape />                
+            </Grid>
+        </Grid>
     </>
   )
 }

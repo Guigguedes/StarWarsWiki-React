@@ -3,7 +3,7 @@ import React, { useLayoutEffect, useState } from 'react'
 import Cabecalho from '../components/Cabecalho'
 import Rodape from '../components/Rodape'
 import MenuOptions from '../components/MenuOptions'
-import { getDuvidas } from '../services/bancoService'
+import { getDuvidas, deleteDuvidas } from '../services/bancoService'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -24,13 +24,15 @@ export default function Menu(props) {
   }
 
   useLayoutEffect(() => {
+
     buscarDuvidas()
   }, [])
 
-  const deleteDuvidas = async (id) => {
+  const deletaDuvidas = async (id) => { 
     try {
       await deleteDuvidas(id)
       buscarDuvidas()
+
     } catch (error) {
       alert(error)
     }
@@ -71,7 +73,7 @@ export default function Menu(props) {
                       <TableCell align="right">{row.telefone}</TableCell>
                       <TableCell align="right">{row.duvida}</TableCell>
                       <TableCell align="right">
-                        <IconButton color="primary" onClick={() => deleteDuvidas(row.id)}>
+                        <IconButton color="primary" onClick={() => deletaDuvidas(row.id)}>
                           <DeleteIcon />
                         </IconButton>
                       </TableCell>

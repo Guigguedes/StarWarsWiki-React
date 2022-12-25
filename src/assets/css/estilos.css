@@ -46,12 +46,12 @@
 }
 
 .rodape{
-    min-height: 80px;
+    min-height: 10px;
     text-align: center;
-    background-color: #e8e8e8;
     border-radius: 10px;
-    padding: 10px;
-    color: "white";
+    padding: 60px;
+    color: #fff;
+    background-image: url("../images/backRodape.jpg");
 }
 
 .not-found__container {
@@ -175,11 +175,14 @@
 }
   
 .contador{
-    color: rgba(0, 0, 0, 0.966);
+    color: white;
     font-weight: bold;
+    text-align: left;
+    font-size: large;
 }
   
 .login-container{
+    background-image: url("../images/backLogin.jpg");
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -222,4 +225,23 @@
     align-items: center;
     flex-direction: column;
     margin-left: -200px;
+}
+
+.api {
+    width: 125%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000;
+}
+
+.title {
+    color: #000;
+    margin-bottom: 20px;
+    padding-left: 650px;
 }

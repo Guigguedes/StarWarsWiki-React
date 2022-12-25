@@ -44,53 +44,55 @@ export default function Login(props) {
     }
 
   return (
-    <Grid container style={{padding:10}}>
-        <Grid item xs={12}>
-            <div style={{textAlign: "center"}}>
-                <h1>Seja Bem-Vindo</h1>
-                <h2>Star Wars Wiki</h2>
-            </div>
+    <div className="login-container">
+        <Grid container style={{padding:10}}>
+            <Grid item xs={12}>
+                <div style={{color:"#fff", textAlign: "center"}}>
+                    <h1>Seja Bem-Vindo</h1>
+                    <h2>Star Wars Wiki</h2>
+                </div>
+            </Grid>
+            <Grid item md={4} xs={12} sm={12}></Grid>
+            <Grid item md={4} xs={12} sm={12} style={{backgroundColor:"white", padding:10, borderRadius:10}}>
+                <div style={{marginBottom:10}}>
+                    <TextField
+                    label="Email"
+                    fullWidth 
+                    variant="standard" 
+                    type={"email"}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <div>
+                    <TextField
+                    label="Senha"
+                    fullWidth 
+                    variant="standard" 
+                    type={"password"}
+                    value={senha}
+                    onChange={(e) => setSenha(e.target.value)}
+                    />
+                </div>
+                <div>
+                    <FormGroup>
+                    <FormControlLabel 
+                        control={<Checkbox/>}
+                        checked={lembrarme} 
+                        onChange={armazenarEmailSenha} 
+                        label="Lembrar-me" />
+                    </FormGroup>
+                </div>
+                <div>
+                    <Button
+                    style={{width:"100%", marginTop:10, padding:10, backgroundColor:"#1E90FF", color:"white", border:"none", borderRadius:5}}
+                    onClick={validar}> 
+                    Entrar
+                    </Button>    
+                </div>
+            </Grid>
+            <Grid item md={4} xs={12} sm={12}></Grid>
         </Grid>
-        <Grid item md={4} xs={12} sm={12}></Grid>
-        <Grid item md={4} xs={12} sm={12} style={{backgroundColor:"white", padding:10, borderRadius:10}}>
-            <div style={{marginBottom:10}}>
-                <TextField
-                label="Email"
-                fullWidth 
-                variant="standard" 
-                type={"email"}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                />
-            </div>
-            <div>
-                <TextField
-                label="Senha"
-                fullWidth 
-                variant="standard" 
-                type={"password"}
-                value={senha}
-                onChange={(e) => setSenha(e.target.value)}
-                />
-            </div>
-            <div>
-                <FormGroup>
-                <FormControlLabel 
-                    control={<Checkbox/>}
-                    checked={lembrarme} 
-                    onChange={armazenarEmailSenha} 
-                    label="Lembrar-me" />
-                </FormGroup>
-            </div>
-            <div>
-                <Button
-                style={{width:"100%", marginTop:10, padding:10, backgroundColor:"#1E90FF", color:"white", border:"none", borderRadius:5}}
-                onClick={validar}> 
-                Entrar
-                </Button>    
-            </div>
-        </Grid>
-        <Grid item md={4} xs={12} sm={12}></Grid>
-    </Grid>
+    </div>
   );
 }

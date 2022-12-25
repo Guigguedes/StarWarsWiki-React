@@ -23,32 +23,26 @@ export default function Starships() {
                     <Cabecalho />
                 </Grid>
                 <Grid item md={12} xs={12} sm={12}>
-
                     <MenuOptions />
-
                 </Grid>
-
                 <div>
                     <h1 className='title'>NAVES ESPACIAIS</h1>
                     <table className="api"> 
                     {
                         Starships.map((item, key) =>
-                                <tr>
-                                    <td style={{widht: "33%"}}><b>Nome:</b> {item.name}</td>
-                                    <td style={{widht: "33%"}}><b>Modelo:</b> {item.model}</td>
-                                    <td style={{widht: "33%"}}><b>Fábrica:</b> {item.manufacturer}</td>
-
-                                </tr>
+                            <tr>
+                                <td style={{widht: "33%"}}><b>Nome:</b> {item.name}</td>
+                                <td style={{widht: "33%"}}><b>Modelo:</b> {item.model}</td>
+                                <td style={{widht: "33%"}}><b>Fábrica:</b> {item.manufacturer}</td>
+                            </tr>
                         )
                     }
                     </table>
                 </div>
-
                 <Grid item md={12} xs={12} sm={12}>
                     <Rodape />
                 </Grid>
             </Grid>
-
         </>
     )
 }

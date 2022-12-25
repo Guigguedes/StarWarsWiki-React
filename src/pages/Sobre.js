@@ -6,7 +6,6 @@ import { Grid } from '@mui/material'
 import { LinkedIn, GitHub } from '@mui/icons-material'
 import Gabi from "../assets/images/Gabi.jpg"
 import Gui from "../assets/images/Gui.jpg"
-import { Avatar } from '@material-ui/core'
 
 export default function Sobre() {
   return (
@@ -17,7 +16,7 @@ export default function Sobre() {
         </Grid>
         <Grid item md={12} xs={12} sm={12}>
           <MenuOptions />
-          <div className='title' style={{textAlign:"center"}}> 
+          <div style={{textAlign:"center"}}> 
             <h1>Equipe</h1>
           </div>
             <div className="card">
@@ -27,7 +26,7 @@ export default function Sobre() {
                 <p>Acadêmica de Ciência da Computação</p>
                 <p>Vila Maria - RS</p>
                 <div className='link-group'>
-                  <a href='https://www.linkedin.com/in/gabrielagiolo' target='_blank'><LinkedIn/></a>
+                  <a href='https://www.linkedin.com/in/gabriela-giolo' target='_blank'><LinkedIn/></a>
                   <a href='https://github.com/gabigiolo8' target='_blank'><GitHub/></a>
                 </div>
               </div>

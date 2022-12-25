@@ -1,5 +1,5 @@
 import { db } from '../services/firebaseConnect'
-import { collection, addDoc, getDocs, query } from "firebase/firestore";
+import { collection, addDoc, doc, getDocs, query, deleteDoc } from "firebase/firestore";
 
 export function salvarDuvidas(dados) {
     return new Promise(async (resolve, reject) => {
@@ -30,5 +30,18 @@ export function getDuvidas() {
         } catch (error) {
             reject(error)
         }
+    })
+}
+
+
+export function deleteDuvidas(id) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            await deleteDoc(doc(db, "duvidas", id))
+            resolve()
+        } catch (error) {
+            reject(error)
+        }
+
     })
 }

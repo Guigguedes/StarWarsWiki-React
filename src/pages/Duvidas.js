@@ -20,24 +20,18 @@ export default function Duvidas(props) {
     }
 
     const salvar = async () => {
-
-
         const dados = {
             nome: nome,
             telefone: telefone,
             duvida: duvida
         }
-
         try {
-            await salvarDuvidas(dados)
             alert("Dados Salvos com Sucesso")
             navigate('/menu')
-
+            await salvarDuvidas(dados)
         } catch (error) {
             alert(error)
         }
-
-
     }
 
     return (
@@ -47,7 +41,6 @@ export default function Duvidas(props) {
                     <Cabecalho />
                 </Grid>
                 <Grid item md={12} xs={12} sm={12}>
-
                     <MenuOptions />
                     <div className='corpo'>
                         <Grid container style={{ padding: 10 }} spacing={1}>
@@ -60,17 +53,13 @@ export default function Duvidas(props) {
                                     onChange={(e) => setNome(e.target.value)}
                                 />
                             </Grid>
-                
-                         
                             <Grid item md={6} xs={12} sm={12}>
                                 <TextField
                                     fullWidth
                                     label="Telefone"
                                     variant="outlined"
                                     value={telefone}
-                                    onChange={(e) => setTelefone(e.target.value)}
-
-                                />
+                                    onChange={(e) => setTelefone(e.target.value)}/>
                             </Grid>
                             <Grid item md={12} xs={12} sm={12}>
                                 <TextField
@@ -97,6 +86,5 @@ export default function Duvidas(props) {
                 </Grid>
             </Grid>
         </>
-
     )
 }

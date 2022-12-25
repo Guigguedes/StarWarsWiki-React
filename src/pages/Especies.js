@@ -18,37 +18,28 @@ export default function Species() {
 
   return (
     <>
-    <Grid container style={{ padding: 10 }}>
-                    <Grid item md={12} xs={12} sm={12}>
-                        <Cabecalho />
-                    </Grid>
-                    <Grid item md={12} xs={12} sm={12}>
-    
-                        <MenuOptions />
-              
-                    </Grid>
-
-                    <div>
-    <h1 className='title'>ESPÉCIES</h1>
-    <table className="api">  
-    {
-        Species.map((item, key) =>
-        <tr>
-                                    <td style={{widht: "33%"}}><b>Nome da Espécie:</b> {item.name}</td>
-                                    <td style={{widht: "33%"}}><b>Língua:</b> {item.language}</td>
-
-
-                                </tr>
-           
-    )
-    }
-    </table>
-</div> 
-                    <Grid item md={12} xs={12} sm={12}>
-                        <Rodape />
-                    </Grid>
-                </Grid>
-        
-        </>
+        <Grid container style={{ padding: 10 }}>
+            <Grid item md={12} xs={12} sm={12}>
+                <Cabecalho />
+            </Grid>
+            <Grid item md={12} xs={12} sm={12}>    
+                <MenuOptions />
+            </Grid>
+            <div>
+                <h1 className='title'>ESPÉCIES</h1>
+                <table className="api">{
+                    Species.map((item, key) =>
+                    <tr>
+                        <td style={{widht: "33%"}}><b>Nome da Espécie:</b> {item.name}</td>
+                        <td style={{widht: "33%"}}><b>Língua:</b> {item.language}</td>
+                    </tr>
+                    )}
+                </table>
+            </div> 
+            <Grid item md={12} xs={12} sm={12}>
+                <Rodape />
+            </Grid>
+        </Grid>
+    </>
   )
 }
